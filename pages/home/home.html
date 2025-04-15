@@ -1,0 +1,44 @@
+<head>
+    <link rel="stylesheet" href="../../assets/styles/style.css">
+    <link rel="stylesheet" href="../../assets/styles/game-over.css">
+    <link rel="stylesheet" href="./home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <script src="../../assets/js/script.js"></script>
+</head>
+
+<div class="container-title">
+    <h1>Welche Stadt hat mehr Einwohner?</h1>
+</div>
+<div class="container-scores">
+    <p>Highscore: <span id="highScore">0</span></p>
+    <p>Score: <span id="currentScore">0</span></p>
+</div>
+<div class="container-game" id="containerGame">
+    <div class="city" id="city1" onclick="guess('city1')">
+        <h2 class="city-name" id="cityName1">City 1</h2>
+        <p class="country-name" id="countryName1">Country 1</p>
+        <p class="city-population" id="cityPop1"></p>
+        <!-- <button onclick="guess('city1')">Guess Higher</button> -->
+    </div>
+    <div class="container-vs-icon">
+        <span class="vs-icon vs-icon-text" id="vsIconText">VS</span>
+        <span class="vs-icon vs-feedback-icon material-symbols-outlined" id="vsFeedbackIcon"></span>
+    </div>
+    <div class="city" id="city2" onclick="guess('city2')">
+        <h2 class="city-name" id="cityName2">City 2</h2>
+        <p class="country-name" id="countryName2">Country 2</p>
+        <p class="city-population" id="cityPop2"></p>
+        <!-- <button onclick="guess('city2')">Guess Higher</button> -->
+    </div>
+</div>
+
+<div id="gameOverPopup" class="popup-overlay">
+    <div class="popup-content">
+        <h2>Game Over</h2>
+        <p>Score: <span id="finalScore">0</span></p>
+        <button onclick="restartGame()">Try Again</button>
+    </div>
+</div>

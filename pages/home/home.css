@@ -1,0 +1,132 @@
+h1{
+    text-align: center;
+}
+
+.container-title{
+    margin: 25px 20px;
+}
+
+.container-game{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.container-scores{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 90%;
+    padding-bottom: 10px;
+}
+
+.city{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 50vh;
+    height: 75vh;
+    border: 1px solid #0000001f;
+    border-radius: 15px;
+    box-shadow: #6c6c6c30 2px 2px 2px 3px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    &:hover{
+        scale: 1.025;
+    }
+}
+
+.city-name{
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-size: 3rem;
+}
+
+.country-name{
+    margin-top: 5px;
+}
+
+.city-population{
+    font-size: 2rem;
+}
+
+/* .container-vs-icon{
+    display: flex;
+    align-items: center;
+} */
+
+/* .vs-icon{
+    width: 100px;
+} */
+
+/* .vs-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border: solid 1px black;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: black;
+    transition: all 0.4s ease;
+} */
+
+.container-vs-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.vs-icon{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background-color: beige;
+}
+
+.vs-icon-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    transition: opacity 0.3s ease;
+}
+
+.vs-icon-text.hide {
+    opacity: 0;
+}
+
+.vs-feedback-icon {
+    position: absolute;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    font-size: 2.5rem;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.vs-feedback-icon.show.correct {
+    background-color: #4CAF50;
+    opacity: 1;
+    transform: scale(1);
+    color: #FFF;
+}
+
+.vs-feedback-icon.show.wrong {
+    background-color: #F44336;
+    opacity: 1;
+    transform: scale(1);
+    color: #FFF;
+}
