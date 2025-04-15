@@ -106,8 +106,10 @@ function guess(selectedCityId) {
     } else {
         feedbackIcon.textContent = 'close';
         feedbackIcon.classList.add('wrong', 'show');
-        showGameOverPopup();
-        return; // Don't move on to next round
+        setTimeout(()=>{
+            showGameOverPopup();
+        }, 1500)
+        return;
     }
 
     setTimeout(() => {
@@ -123,7 +125,6 @@ function guess(selectedCityId) {
 function showGameOverPopup() {
     const popup = document.getElementById('gameOverPopup');
     const scoreEl = document.getElementById('finalScore');
-    // const highScoreEl = document.getElementById('highScore');
     const feedbackIcon = document.getElementById('vsFeedbackIcon');
     const vsText = document.getElementById('vsIconText');
 
@@ -135,7 +136,6 @@ function showGameOverPopup() {
     }
 
     scoreEl.textContent = score;
-    // highScoreEl.textContent = highScore;
 
     popup.classList.add('show');
 
@@ -153,8 +153,5 @@ function restartGame() {
     displayRandomCities();
     canGuess = true;
 }
-
-
-
 
 fetchCityPopulations();
