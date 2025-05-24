@@ -45,6 +45,7 @@ h1{
     text-transform: uppercase;
     margin-bottom: 0;
     font-size: 3rem;
+    text-align: center;
 }
 
 .country-name{
@@ -147,5 +148,20 @@ h1{
     .vs-icon-text {
         font-size: 1rem;
         margin: 20px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    
+    .city{
+        max-height: 175px;
+    }
+
+    .city-name{
+        font-size: 1.5rem;
+    }
+    
+    .city-population{
+        margin-top: 5px;
     }
 }

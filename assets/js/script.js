@@ -73,8 +73,8 @@ function displayRandomCities() {
     document.getElementById('cityPop2').textContent = '';
 
     // Store their populations for comparison later
-    document.getElementById('cityPop1').dataset.population = city1.population;
-    document.getElementById('cityPop2').dataset.population = city2.population;
+    document.getElementById('cityPop1').dataset.population = Math.round(city1.population);
+    document.getElementById('cityPop2').dataset.population = Math.round(city2.population);
 }
 
 function guess(selectedCityId) {
