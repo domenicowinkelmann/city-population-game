@@ -31,7 +31,7 @@ async function fetchCityPopulations() {
 
         cityData = json.data
             .map(cityEntry => {
-                const latest = cityEntry.populationCounts[0]; // Assume this is the latest
+                const latest = cityEntry.populationCounts[0];
                 return {
                     city: cityEntry.city,
                     country: cityEntry.country,
